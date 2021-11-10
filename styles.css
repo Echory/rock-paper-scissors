@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: 'Caveat', cursive;
 }
 
 body {
@@ -16,4 +17,21 @@ button {
 img {
   width: 40px;
   height: 40px;
+}
+
+/*----MAIN----*/
+main {
+  /* background: linear-gradient(180deg, hsla(23, 74%, 57%, 1) 0%, hsla(344, 39%, 22%, 1) 72%, #25082b 100%); */
+  background: linear-gradient(180deg, hsla(23, 74%, 57%, 1) 0%, hsla(24, 93%, 32%, 1) 53%, hsla(27, 88%, 16%, 1) 100%);
+  width: 70%;
+}
+
+/*----SIDES----*/
+.you-side,
+.computer-side {
+  /* background-color: #1a1917; */
+  background: linear-gradient(270deg, hsla(0, 5%, 26%, 1) 2%, hsla(0, 5%, 17%, 1) 47%, hsla(0, 2%, 9%, 1) 100%);
+  color: white;
+  height: 100vh;
+  width: 18%;
 }
