@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  font-family: 'Caveat', cursive;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  margin-top: 50px;
+  /* border: none;
+  background-color: transparent; */
+}
+
+button:hover {
+  color: white;
+  font-size: 20px;
+  border: 6px dotted black;
+}
+
+.classic-button,
+.haunted-button {
+  width: 200px;
+  height: 200px;
+  border: 4px dotted black;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+/*----MAIN----*/
+main {
+  background: linear-gradient(180deg, rgb(223, 48, 77) 0%, rgb(208, 13, 13) 100%);
+  width: 70%;
+
+  /* rgb(77, 67, 84) 100% */
+}
+
+h1,
+.choose-game-sentence
+ {
+  text-align: center;
+}
+
+.choose-game-sentence {
+  font-size: 20px;
+}
+
+.choose-game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*----SIDES----*/
+.you-side,
+.computer-side {
+  background-color: #1a1917;
+  color: white;
+  height: 100vh;
+  width: 18%;
+}
+
+.you-name,
+.computer-name {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}

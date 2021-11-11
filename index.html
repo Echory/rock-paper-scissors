@@ -4,24 +4,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.html">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
   <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <section>
-    <p>You</p>
+  <section class="you-side">
+    <p class="you-name">You</p>
   </section>
-  <section>
+  <main>
     <h1>ROCK PAPER SCISSORS</h1>
-    <p>Choose your game!</p>
-    <div>
-      <button>CLASSIC</button>
-      <button>HAUNTED</button>
+    <div class="choose-game-area">
+      <p class="choose-game-sentence">Choose your game!</p>
+      <button class="classic-button">CLASSIC
+        <p>rock > scissors</p>
+        <p> paper > rock</p>
+        <p>scissors > paper</p>
+      </button>
+      <button class="haunted-button">HAUNTED
+        <p>rock > scissors & ghost</p>
+        <p> paper > rock & vampire</p>
+        <p>scissors > paper & ghost</p>
+        <p>ghost > paper & vampire</p>
+        <p>vampire > scissors & rock</p>
+      </button>
     </div>
-  </section>
-  <section>
-    <p>Computer</p>
+    <div class="classic-buttons hidden">
+      <button><img src="assets/rock.svg"></button>
+      <button><img src="assets/paper.svg"></button>
+      <button><img src="assets/scissors.svg"></button>
+    </div>
+    <div class="haunted-buttons hidden">
+      <button><img src="assets/rock.svg"></button>
+      <button><img src="assets/paper.svg"></button>
+      <button><img src="assets/scissors.svg"></button>
+      <button><img src="assets/ghost.svg"></button>
+      <button><img src="assets/drac.svg"></button>
+    </div>
+  </main>
+  <section class="computer-side">
+    <p class="computer-name">Computer</p>
   </section>
   <script src="main.js"></script>
 </body>
-</html>
+</html> 
