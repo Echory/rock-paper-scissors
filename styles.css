@@ -39,24 +39,26 @@ button:hover {
 }
 
 img {
-  width: 40px;
-  height: 40px;
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
 }
 
 /*----MAIN----*/
 main {
-  background: linear-gradient(180deg, rgb(220, 5, 41) 0%, rgba(133, 7, 7, 0.851) 100%);
   width: 70%;
   background-image: url("assets/ghosts.png");
 }
 
 h1,
-.choose-game-sentence
+.choose-game-sentence,
+.choose-fighter-sentence
  {
   text-align: center;
 }
 
-.choose-game-sentence {
+.choose-game-sentence,
+.choose-fighter-sentence {
   font-size: 20px;
 }
 
@@ -66,18 +68,27 @@ h1,
   align-items: center;
 }
 
-/*----CLASSIC PLAY----*/
-.classic-buttons {
+/*----CLASSIC/HAUNTED PLAY----*/
+.classic-buttons,
+.haunted-buttons {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 
 .rock-btn,
 .paper-btn,
-.scissors-btn {
-  width: 90px;
-  height: 90px;
-  margin: 20px;
+.scissors-btn,
+.ghost-btn,
+.vampire-btn {
+  width: 160px;
+  height: 160px;
+  margin: 25px;
+  background-color: white;
+  opacity: 0.70;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 
