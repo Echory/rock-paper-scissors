@@ -8,12 +8,32 @@ body {
   justify-content: space-between;
 }
 
+.hidden {
+  display: none;
+}
+
 button {
   width: 80px;
   height: 80px;
   margin-top: 50px;
   /* border: none;
   background-color: transparent; */
+}
+
+button:hover {
+  color: white;
+  font-size: 20px;
+  border: 6px dotted black;
+}
+
+.classic-button,
+.haunted-button {
+  width: 200px;
+  height: 200px;
+  border: 4px dotted black;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 img {
@@ -23,8 +43,10 @@ img {
 
 /*----MAIN----*/
 main {
-  background: linear-gradient(180deg, hsla(350, 73%, 44%, 1) 0%, rgb(27, 9, 41) 100%);
+  background: linear-gradient(180deg, rgb(223, 48, 77) 0%, rgb(208, 13, 13) 100%);
   width: 70%;
+
+  /* rgb(77, 67, 84) 100% */
 }
 
 h1,

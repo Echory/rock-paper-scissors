@@ -17,15 +17,25 @@
     <h1>ROCK PAPER SCISSORS</h1>
     <div class="choose-game-area">
       <p class="choose-game-sentence">Choose your game!</p>
-      <button>CLASSIC</button>
-      <button>HAUNTED</button>
+      <button class="classic-button">CLASSIC
+        <p>rock > scissors</p>
+        <p> paper > rock</p>
+        <p>scissors > paper</p>
+      </button>
+      <button class="haunted-button">HAUNTED
+        <p>rock > scissors & ghost</p>
+        <p> paper > rock & vampire</p>
+        <p>scissors > paper & ghost</p>
+        <p>ghost > paper & vampire</p>
+        <p>vampire > scissors & rock</p>
+      </button>
     </div>
-    <div class="classic-buttons">
+    <div class="classic-buttons hidden">
       <button><img src="assets/rock.svg"></button>
       <button><img src="assets/paper.svg"></button>
       <button><img src="assets/scissors.svg"></button>
     </div>
-    <div class="haunted-buttons">
+    <div class="haunted-buttons hidden">
       <button><img src="assets/rock.svg"></button>
       <button><img src="assets/paper.svg"></button>
       <button><img src="assets/scissors.svg"></button>
