@@ -9,15 +9,16 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none!important;
 }
 
 button {
   width: 80px;
   height: 80px;
   margin-top: 50px;
-  /* border: none;
-  background-color: transparent; */
+  border: none;
+  background-color:transparent;
+  color: white;
 }
 
 button:hover {
@@ -31,9 +32,10 @@ button:hover {
   width: 200px;
   height: 200px;
   border: 4px dotted black;
-  background-color: transparent;
+  background-color: black;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 17px;
+  opacity: 0.70;
 }
 
 img {
@@ -43,10 +45,9 @@ img {
 
 /*----MAIN----*/
 main {
-  background: linear-gradient(180deg, rgb(223, 48, 77) 0%, rgb(208, 13, 13) 100%);
+  background: linear-gradient(180deg, rgb(220, 5, 41) 0%, rgba(133, 7, 7, 0.851) 100%);
   width: 70%;
-
-  /* rgb(77, 67, 84) 100% */
+  background-image: url("assets/ghosts.png");
 }
 
 h1,
@@ -65,6 +66,20 @@ h1,
   align-items: center;
 }
 
+/*----CLASSIC PLAY----*/
+.classic-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.rock-btn,
+.paper-btn,
+.scissors-btn {
+  width: 90px;
+  height: 90px;
+  margin: 20px;
+}
+
 
 /*----SIDES----*/
 .you-side,
@@ -73,6 +88,8 @@ h1,
   color: white;
   height: 100vh;
   width: 18%;
+  background-image: url("./assets/bloodrip.png");
+  background-repeat: no-repeat;
 }
 
 .you-name,
