@@ -3,24 +3,22 @@ class Game {
     this.playerOne = playerOne;
     this.playerTwo = playerTwo;
   }
-  detectWinner() {
+  detectWinner(userScore, computerScore) {
+    userScore++;
+    
   }
 
-  // detectLoser() {
-
-  // }
   detectDraw() {
 
   }
-  // gameplay() {
-
-  // }
+  
   recordMove() {
 
   }
   resetGame() {
 
   }
+
   storeType() {
 
   }
