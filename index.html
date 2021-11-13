@@ -11,41 +11,55 @@
 </head>
 <body>
   <section class="you-side">
-    <p class="you-name">You</p>
+    <p class="you-name">You 🤺</p>
   </section>
   <main>
     <h1>ROCK PAPER SCISSORS</h1>
-    <div class="choose-game-area" id="chooseGamePage">
+    <section class="choose-game-area" id="chooseGamePage">
       <p class="choose-game-sentence">Choose your game!</p>
+     <div>
       <button class="classic-button" id="classicBtn">CLASSIC
         <p>rock > scissors</p>
         <p> paper > rock</p>
         <p>scissors > paper</p>
       </button>
+     </div>
+     <div>
       <button class="haunted-button" id="hauntedBtn">HAUNTED
         <p>rock > scissors & ghost</p>
-        <p> paper > rock & vampire</p>
+        <p>paper > rock & vampire</p>
         <p>scissors > paper & ghost</p>
         <p>ghost > paper & vampire</p>
         <p>vampire > scissors & rock</p>
       </button>
     </div>
-    <div class="classic-buttons hidden" id="classicBtns">
-      <button class="rock-btn"><img src="assets/rock.svg"></button>
-      <button class="paper-btn"><img src="assets/paper.svg"></button>
-      <button class="scissors-btn"><img src="assets/scissors.svg"></button>
-    </div>
-    <div class="haunted-buttons hidden">
-      <button><img src="assets/rock.svg"></button>
-      <button><img src="assets/paper.svg"></button>
-      <button><img src="assets/scissors.svg"></button>
-      <button><img src="assets/ghost.svg"></button>
-      <button><img src="assets/drac.svg"></button>
-    </div>
+    </section>
+    <section class="classic-buttons hidden" id="classicBtns">
+      <p class="choose-fighter-sentence">Choose your fighter!</p>
+      <div>
+        <button class="rock-btn r" id="rock"><img src="assets/rock.svg"></button>
+        <button class="paper-btn p" id="paper"><img src="assets/scroll.svg"></button>
+        <button class="scissors-btn s" id="scissors"><img src="assets/scissors.svg"></button>
+       </div>
+    </section>
+    <section class="haunted-buttons hidden" id="hauntedBtns">
+      <p class="choose-fighter-sentence">Choose your fighter!</p>
+      <div>
+        <button class="rock-btn r"><img src="assets/rock.svg"></button>
+        <button class="paper-btn p"><img src="assets/scroll.svg"></button>
+        <button class="scissors-btn s"><img src="assets/scissors.svg"></button>
+        <div>
+          <button class="ghost-btn g" id="ghost"><img src="assets/ghost.svg"></button>
+          <button class="vampire-btn v" id="vampire"><img src="assets/drac.svg"></button>
+        </div>
+      </div>
+    </section>
   </main>
   <section class="computer-side">
-    <p class="computer-name">Computer</p>
+    <p class="computer-name">Computer 🎮 </p>
   </section>
+  <script src="player.js"></script>
+  <script src="game.js"></script>
   <script src="main.js"></script>
 </body>
 </html> 
