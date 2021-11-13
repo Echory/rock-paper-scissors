@@ -11,18 +11,31 @@ class Player {
   retrieveWinsFromStorage() {
 
   }
-  takeTurn() {
-  
+  takeTurn(gameType, playerInput) {
+    if(playerInput) {
+      this.choice = playerInput
+      return
+    }
+
+    if (this.name === 'Computer' && gameType === 'classic') {
+      this.generateComputerChoiceClassic()
+      return
+    }
+
+    if (this.name === 'Computer' && gameType === 'haunted') {
+      this.generateComputerChoiceHaunted()
+      return
+    }
   }
 
   generateComputerChoiceClassic() {
-    var choices = ['r', 'p', 's'];
+    var choices = ['rock', 'paper', 'scissors'];
     var randomNumber = (Math.floor(Math.random() * 3));
-    return choices[randomNumber];
+    this.choice = choices[randomNumber];
   }
   generateComputerChoiceHaunted() {
-    var choices = ['r', 'p', 's', 'g', 'v'];
+    var choices = ['rock', 'paper', 'scissors', 'ghost', 'vampire'];
     var randomNumber = (Math.floor(Math.random() * 5));
-    return choices[randomNumber];
+    this.choice = choices[randomNumber];
   }
 }
