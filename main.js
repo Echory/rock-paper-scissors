@@ -9,6 +9,8 @@ var paperBtn = document.querySelector('.p');
 var scissorsBtn = document.querySelector('.s');
 var ghostBtn = document.querySelector('.g');
 var vampireBtn = document.querySelector('.v');
+var youSide = document.querySelector('#youSide');
+var computerSide = document.querySelector('#computerSide');
 
 var game = new Game();
 
@@ -48,3 +50,12 @@ function getSelectedChoice(event) {
   var youChoice = event.target.parentNode.id;
   game.newGame(youChoice)
 }
+
+function displayScore() {
+  debugger
+  youSide.innerHTML = ``;
+  computerSide.innerHTML = ``;
+  youSide.innerHTML += `<p class="you-score">${game.playerOne.wins}</p>`;
+  computerSide.innerHTML += `<p class="computer-score">${game.playerTwo.wins}</p>`;
+}
+

@@ -1,7 +1,7 @@
 class Game {
   constructor() {
-    this.playerOne = new Player('You');
-    this.playerTwo = new Player('Computer');
+    this.playerOne = new Player('You', 'assets/you.svg');
+    this.playerTwo = new Player('Computer', 'assets/computer.svg');
     this.type;
     this.winner;
     this.winConditions = {
@@ -19,20 +19,13 @@ class Game {
     if(this.winConditions[youChoice].includes(computerChoice)){
       this.playerOne.wins++;
       this.winner = 'you';
-      debugger
-      return
     } else if(youChoice === computerChoice) {
       this.winner = 'none';
-      debugger
-      return
-    }else {
+    } else {
       this.playerTwo.wins++;
       this.winner = 'computer';
-      debugger
     }
-  // Use win conditions to detect winner
-  // Increment winner score
-  // Reset game
+    displayScore();
   }
 
   newGame(playerInput) {

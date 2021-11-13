@@ -105,7 +105,22 @@ h1,
 
 .you-name,
 .computer-name {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 20px;
+  align-items: center;
+}
+
+.player-img {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.you-score,
+.computer-score {
+  font-size: 60px;
+  text-align: center;
 }
