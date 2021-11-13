@@ -34,8 +34,9 @@ class Game {
     this.detectWinner()
   }
 
-  // resetGame() {
-  //   // start over
-  // }
- 
+  resetGame() {
+    this.winner = null;
+    this.playerOne.choice = null;
+    this.playerTwo.choice = null;
+  }
 }

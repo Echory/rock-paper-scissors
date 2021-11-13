@@ -52,10 +52,19 @@ function getSelectedChoice(event) {
 }
 
 function displayScore() {
-  debugger
   youSide.innerHTML = ``;
   computerSide.innerHTML = ``;
   youSide.innerHTML += `<p class="you-score">${game.playerOne.wins}</p>`;
   computerSide.innerHTML += `<p class="computer-score">${game.playerTwo.wins}</p>`;
+}
+
+function displayFighterChoices() {
+  classicBtns.innerHTML = ``;
+  classicBtns.innerHTML += `<div>
+  <img src="assets/${game.playerOne.choice}.svg">
+  <img src="assets/${game.playerTwo.choice}.svg">
+  </div>`
+  // hide(classicBtns)
+  // show()
 }
 
