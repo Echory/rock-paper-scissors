@@ -16,12 +16,10 @@ class Player {
       this.choice = playerInput
       return
     }
-
     if (this.name === 'Computer' && gameType === 'classic') {
       this.generateComputerChoiceClassic()
       return
     }
-
     if (this.name === 'Computer' && gameType === 'haunted') {
       this.generateComputerChoiceHaunted()
       return
