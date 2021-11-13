@@ -4,15 +4,13 @@ var hauntedBtn = document.querySelector('#hauntedBtn');
 var chooseGamePage = document.querySelector('#chooseGamePage');
 var classicBtns = document.querySelector('#classicBtns');
 var hauntedBtns = document.querySelector('#hauntedBtns');
-var rockBtn = document.querySelector('.rock');
-var paperBtn = document.querySelector('.paper');
-var scissorsBtn = document.querySelector('.scissors');
-var ghostBtn = document.querySelector('.ghost');
-var vampireBtn = document.querySelector('.vampire');
+var rockBtn = document.querySelector('.r');
+var paperBtn = document.querySelector('.p');
+var scissorsBtn = document.querySelector('.s');
+var ghostBtn = document.querySelector('.g');
+var vampireBtn = document.querySelector('.v');
 
-
-var userScore = 0;
-var computerScore = 0;
+var game;
 
 //EVENT LISTENERS//
 classicBtn.addEventListener('click', showClassicGame);
@@ -29,17 +27,16 @@ function hide(element) {
 }
 
 function showClassicGame() {
+  game = new Game('classic');
+  debugger
   hide(chooseGamePage);
   show(classicBtns);
 }
 
 function showHauntedGame() {
+  game = new Game('haunted');
   hide(chooseGamePage);
   show(hauntedBtns);
 }
 
-function generateComputerChoiceClassic() {
-  var choices = ['rock', 'paper', 'scissors'];
-  var randomNumber = (Math.floor(Math.random() * 3));
-  return choices[randomNumber];
-}
+
