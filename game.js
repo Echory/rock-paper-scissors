@@ -1,8 +1,8 @@
 class Game {
-  constructor(type) {
+  constructor() {
     this.playerOne = new Player('You');
     this.playerTwo = new Player('Computer');
-    this.type = type;
+    this.type;
     this.winConditions = {
       rock: ['scissors', 'ghost'],
       paper: ['rock', 'vampire'],
@@ -10,23 +10,23 @@ class Game {
       ghost: ['vampire', 'paper'],
       vampire: ['rock', 'scissors'] }
   }
-  detectWinner(userScore, computerScore) {
-//compare userScore and computerScore , return winner and update player score
+
+  detectWinner() {
+
+  // Use win conditions to detect winner
+  // Increment winner score
+  // Reset game
   }
 
-  detectDraw() {
-//if choices are === , draw
+
+  newGame(playerInput) {
+    this.playerOne.takeTurn(this.type, playerInput)
+    this.playerTwo.takeTurn(this.type)
+    this.detectWinner()
   }
-  
-  recordMove() {
-//could be in detectwinner?
-  }
+
   resetGame() {
-// resest game after there is a winner
+    // start over
   }
  
-
-//   storeType() {
-// //detect if 
-//   }
 }
