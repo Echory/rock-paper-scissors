@@ -4,17 +4,22 @@ var hauntedBtn = document.querySelector('#hauntedBtn');
 var chooseGamePage = document.querySelector('#chooseGamePage');
 var classicBtns = document.querySelector('#classicBtns');
 var hauntedBtns = document.querySelector('#hauntedBtns');
-var rockBtn = document.querySelector('.r');
+var rockBtn = document.querySelector('#rock');
 var paperBtn = document.querySelector('.p');
 var scissorsBtn = document.querySelector('.s');
 var ghostBtn = document.querySelector('.g');
 var vampireBtn = document.querySelector('.v');
 
-var game;
+var game = new Game();
 
 //EVENT LISTENERS//
 classicBtn.addEventListener('click', showClassicGame);
 hauntedBtn.addEventListener('click', showHauntedGame);
+rockBtn.addEventListener('click', getSelectedChoice);
+paperBtn.addEventListener('click', getSelectedChoice);
+scissorsBtn.addEventListener('click', getSelectedChoice);
+ghostBtn.addEventListener('click', getSelectedChoice);
+vampireBtn.addEventListener('click', getSelectedChoice);
 
 
 //FUNCTIONS//
@@ -27,16 +32,19 @@ function hide(element) {
 }
 
 function showClassicGame() {
-  game = new Game('classic');
-  debugger
+  game.type = 'classic';
   hide(chooseGamePage);
   show(classicBtns);
 }
 
 function showHauntedGame() {
-  game = new Game('haunted');
+  game.type = 'haunted';
   hide(chooseGamePage);
   show(hauntedBtns);
 }
 
 
+function getSelectedChoice(event) {
+  var youChoice = event.target.parentNode.id;
+  game.newGame(youChoice)
+}
