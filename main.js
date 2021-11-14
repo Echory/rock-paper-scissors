@@ -64,7 +64,9 @@ function displayFighterChoices() {
   <img src="assets/${game.playerOne.choice}.svg">
   <img src="assets/${game.playerTwo.choice}.svg">
   </div>`
-  // hide(classicBtns)
-  // show()
+  setTimeout(startNewRound, 500);
 }
 
+function startNewRound() {
+  show()
+}

@@ -14,15 +14,15 @@ class Player {
   takeTurn(gameType, playerInput) {
     if(playerInput) {
       this.choice = playerInput
-      return
+      // return
     }
     if (this.name === 'Computer' && gameType === 'classic') {
       this.generateComputerChoiceClassic()
-      return
+      // return
     }
     if (this.name === 'Computer' && gameType === 'haunted') {
       this.generateComputerChoiceHaunted()
-      return
+      // return
     }
     displayFighterChoices();
   }
