@@ -12,6 +12,7 @@ var vampireBtn = document.querySelector('.v');
 var youSide = document.querySelector('#youSide');
 var computerSide = document.querySelector('#computerSide');
 var choicesDisplay = document.querySelector('#choicesDisplay');
+var chooseFighterParagraph = document.querySelector('#chooseFighterParagraph');
 
 var game = new Game();
 
@@ -38,6 +39,7 @@ function showClassicGame() {
   game.type = 'classic';
   hide(chooseGamePage);
   show(allBtns);
+  show(chooseFighterParagraph);
 }
 
 function showHauntedGame() {
@@ -45,6 +47,7 @@ function showHauntedGame() {
   hide(chooseGamePage);
   show(allBtns);
   show(hauntedBtns);
+  show(chooseFighterParagraph);
 }
 
 
@@ -68,11 +71,23 @@ function displayFighterChoices() {
   </div>`
   show(choicesDisplay);
   hide(allBtns);
+  declareWinner();
   setTimeout(playNewRound, 700);
 }
 
 function playNewRound() {
   hide(choicesDisplay);
+  show(chooseFighterParagraph)
   show(allBtns);
 }
  
+function declareWinner() {
+  chooseFighterParagraph.innerHTML = ``;
+  if(game.winner === 'you') {
+    chooseFighterParagraph.innerHTML += `<p class="result">${game.playerOne.choice} wins!</p>`;
+  } else if(game.winner === 'computer') {
+    chooseFighterParagraph.innerHTML += `<p class="result>${game.playerTwo.choice} wins!</p>`
+  } else {
+    chooseFighterParagraph.innerHTML += `<p class="result>Its a draw!</p>`
+  }
+}

@@ -94,6 +94,10 @@ h1,
   cursor: pointer;
 }
 
+.result {
+  text-align: center;
+  text-transform: capitalize;
+}
 
 /*----SIDES----*/
 .you-side,
