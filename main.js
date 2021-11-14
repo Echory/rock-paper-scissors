@@ -39,7 +39,7 @@ function showClassicGame() {
   game.type = 'classic';
   hide(chooseGamePage);
   show(allBtns);
-  show(chooseFighterParagraph);
+  // show(chooseFighterParagraph);
 }
 
 function showHauntedGame() {
@@ -47,7 +47,7 @@ function showHauntedGame() {
   hide(chooseGamePage);
   show(allBtns);
   show(hauntedBtns);
-  show(chooseFighterParagraph);
+  // show(chooseFighterParagraph);
 }
 
 
@@ -65,29 +65,43 @@ function displayScore() {
 
 function displayFighterChoices() {
   choicesDisplay.innerHTML = ``;
+  if(game.winner === 'you' || game.winner === 'computer'){
   choicesDisplay.innerHTML += `<div class="fighter-choices">
+  <p class="winner">${game.winner} won this round!</p>
   <img src="assets/${game.playerOne.choice}.svg">
   <img src="assets/${game.playerTwo.choice}.svg">
   </div>`
+} else if(game.winner === 'none') {
+  choicesDisplay.innerHTML += `<div class="fighter-choices">
+  <p class="winner>Its a draw!</p>
+  <img src="assets/${game.playerOne.choice}.svg">
+  <img src="assets/${game.playerTwo.choice}.svg">
+  </div>`
+}
   show(choicesDisplay);
   hide(allBtns);
-  declareWinner();
-  setTimeout(playNewRound, 700);
+  setTimeout(playNewRound, 2000);
 }
 
 function playNewRound() {
   hide(choicesDisplay);
-  show(chooseFighterParagraph)
+  // show(chooseFighterParagraph)
   show(allBtns);
+  // show(chooseFighterParagraph);
 }
  
-function declareWinner() {
-  chooseFighterParagraph.innerHTML = ``;
-  if(game.winner === 'you') {
-    chooseFighterParagraph.innerHTML += `<p class="result">${game.playerOne.choice} wins!</p>`;
-  } else if(game.winner === 'computer') {
-    chooseFighterParagraph.innerHTML += `<p class="result>${game.playerTwo.choice} wins!</p>`
-  } else {
-    chooseFighterParagraph.innerHTML += `<p class="result>Its a draw!</p>`
-  }
-}
+// function declareWinner() {
+//   chooseFighterParagraph.innerHTML = ``;
+//   if(game.winner === 'you') {
+//     chooseFighterParagraph.innerHTML += `<p class="result">${game.playerOne.choice} wins!</p>`;
+//     debugger
+//   } 
+//   if(game.winner === 'none') {
+//     chooseFighterParagraph.innerHTML += `<p class="result>Its a draw!</p>`
+//     debugger
+//   } 
+//   if(game.winner === 'computer') {
+//     chooseFighterParagraph.innerHTML += `<p class="result>${game.playerTwo.choice} wins!</p>`
+//     debugger
+//   }
+// }

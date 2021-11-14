@@ -94,9 +94,10 @@ h1,
   cursor: pointer;
 }
 
-.result {
+.winner {
   text-align: center;
-  text-transform: capitalize;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 /*----SIDES----*/

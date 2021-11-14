@@ -24,6 +24,7 @@ class Player {
       this.generateComputerChoiceHaunted()
       // return
     }
+    game.detectWinner();
     displayFighterChoices();
   }
 
