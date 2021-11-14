@@ -69,12 +69,15 @@ h1,
 }
 
 /*----CLASSIC/HAUNTED PLAY----*/
-.classic-buttons,
-.haunted-buttons {
+.classic-buttons {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
+/* .haunted-buttons {
+  display: flex;
+} */
 
 
 .rock-btn,

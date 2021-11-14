@@ -42,6 +42,7 @@ function showClassicGame() {
 function showHauntedGame() {
   game.type = 'haunted';
   hide(chooseGamePage);
+  show(classicBtns);
   show(hauntedBtns);
 }
 
