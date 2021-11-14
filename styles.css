@@ -68,17 +68,17 @@ h1,
   align-items: center;
 }
 
+.choices-display {
+  display: flex;
+  justify-content: center;
+}
+
 /*----CLASSIC/HAUNTED PLAY----*/
-.classic-buttons {
+.all-buttons {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
-/* .haunted-buttons {
-  display: flex;
-} */
-
 
 .rock-btn,
 .paper-btn,

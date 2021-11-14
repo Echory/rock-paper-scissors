@@ -2,7 +2,7 @@
 var classicBtn = document.querySelector('#classicBtn');
 var hauntedBtn = document.querySelector('#hauntedBtn');
 var chooseGamePage = document.querySelector('#chooseGamePage');
-var classicBtns = document.querySelector('#classicBtns');
+var allBtns = document.querySelector('#allBtns');
 var hauntedBtns = document.querySelector('#hauntedBtns');
 var rockBtn = document.querySelector('.r');
 var paperBtn = document.querySelector('.p');
@@ -11,6 +11,7 @@ var ghostBtn = document.querySelector('.g');
 var vampireBtn = document.querySelector('.v');
 var youSide = document.querySelector('#youSide');
 var computerSide = document.querySelector('#computerSide');
+var choicesDisplay = document.querySelector('#choicesDisplay');
 
 var game = new Game();
 
@@ -36,13 +37,13 @@ function hide(element) {
 function showClassicGame() {
   game.type = 'classic';
   hide(chooseGamePage);
-  show(classicBtns);
+  show(allBtns);
 }
 
 function showHauntedGame() {
   game.type = 'haunted';
   hide(chooseGamePage);
-  show(classicBtns);
+  show(allBtns);
   show(hauntedBtns);
 }
 
@@ -60,14 +61,18 @@ function displayScore() {
 }
 
 function displayFighterChoices() {
-  classicBtns.innerHTML = ``;
-  classicBtns.innerHTML += `<div>
+  choicesDisplay.innerHTML = ``;
+  choicesDisplay.innerHTML += `<div class="fighter-choices">
   <img src="assets/${game.playerOne.choice}.svg">
   <img src="assets/${game.playerTwo.choice}.svg">
   </div>`
-  setTimeout(startNewRound, 500);
+  show(choicesDisplay);
+  hide(allBtns);
+  setTimeout(playNewRound, 700);
 }
 
-function startNewRound() {
-  show()
+function playNewRound() {
+  hide(choicesDisplay);
+  show(allBtns);
 }
+ 
