@@ -24,10 +24,9 @@ paperBtn.addEventListener('click', getSelectedChoice);
 scissorsBtn.addEventListener('click', getSelectedChoice);
 ghostBtn.addEventListener('click', getSelectedChoice);
 vampireBtn.addEventListener('click', getSelectedChoice);
-changeGameBtn.addEventListener('click', backToMain);
-// window.addEventListener('DOMContentLoaded', function(){
-//   retrieveStorageWins();
-// });
+changeGameBtn.addEventListener('click', backToMain);   
+backToMain();
+
 
 
 
@@ -88,7 +87,7 @@ function displayFighterChoices() {
 }
   show(choicesDisplay);
   hide(allBtns);
-  setTimeout(playNewRound, 2000);
+  setTimeout(playNewRound, 1000);
 }
 
 function playNewRound() {
@@ -102,4 +101,5 @@ function backToMain() {
   show(chooseGamePage);
   hide(allBtns);
   hide(hauntedBtns);
+  displayScore();
 }
