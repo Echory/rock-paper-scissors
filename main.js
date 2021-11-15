@@ -73,7 +73,7 @@ function displayFighterChoices() {
   </div>`
 } else if(game.winner === 'none') {
   choicesDisplay.innerHTML += `<div class="fighter-choices">
-  <p class="winner>Its a draw!</p>
+  <p class="winner">Its a draw!</p>
   <img src="assets/${game.playerOne.choice}.svg">
   <img src="assets/${game.playerTwo.choice}.svg">
   </div>`

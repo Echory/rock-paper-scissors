@@ -25,6 +25,7 @@ class Game {
       this.playerTwo.wins++;
       this.winner = 'computer';
     }
+    displayFighterChoices();
     displayScore();
   }
 
