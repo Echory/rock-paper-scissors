@@ -6,11 +6,14 @@ class Player {
     this.choice;
   }
   saveWinsToStorage() {
-
+    localStorage.setItem(this.name, this.wins)
   }
+
   retrieveWinsFromStorage() {
-
+    var storageWins = localStorage.getItem(this.name);
+    return storageWins;
   }
+
   takeTurn(gameType, playerInput) {
     if(playerInput) {
       this.choice = playerInput

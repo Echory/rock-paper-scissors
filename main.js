@@ -24,6 +24,8 @@ paperBtn.addEventListener('click', getSelectedChoice);
 scissorsBtn.addEventListener('click', getSelectedChoice);
 ghostBtn.addEventListener('click', getSelectedChoice);
 vampireBtn.addEventListener('click', getSelectedChoice);
+// window.addEventListener('DOMContentLoaded', retrieveStorageWins);
+// retrieveStorageWins();
 
 
 //FUNCTIONS//
@@ -48,6 +50,11 @@ function showHauntedGame() {
   show(hauntedBtns);
 }
 
+function startGame() {
+  // set up variables that can hold player wins for local storage
+ 
+}
+ 
 
 function getSelectedChoice(event) {
   var youChoice = event.target.parentNode.id;
@@ -57,8 +64,8 @@ function getSelectedChoice(event) {
 function displayScore() {
   youSide.innerHTML = ``;
   computerSide.innerHTML = ``;
-  youSide.innerHTML += `<p class="you-score">${game.playerOne.wins}</p>`;
-  computerSide.innerHTML += `<p class="computer-score">${game.playerTwo.wins}</p>`;
+  youSide.innerHTML += `<p class="you-score">${game.playerOne.retrieveWinsFromStorage()}</p>`;
+  computerSide.innerHTML += `<p class="computer-score">${game.playerTwo.retrieveWinsFromStorage()}</p>`;
 }
 
 function displayFighterChoices() {
@@ -85,5 +92,10 @@ function playNewRound() {
   hide(choicesDisplay);
   show(allBtns);
   game.resetGame();
+
 }
  
+// function retrieveStorageWins() {
+//   game.playerOne.retrieveWinsFromStorage('you');
+//   game.playerTwo.retrieveWinsFromStorage('computer');
+// }
