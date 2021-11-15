@@ -39,7 +39,6 @@ function showClassicGame() {
   game.type = 'classic';
   hide(chooseGamePage);
   show(allBtns);
-  // show(chooseFighterParagraph);
 }
 
 function showHauntedGame() {
@@ -47,7 +46,6 @@ function showHauntedGame() {
   hide(chooseGamePage);
   show(allBtns);
   show(hauntedBtns);
-  // show(chooseFighterParagraph);
 }
 
 
@@ -85,23 +83,7 @@ function displayFighterChoices() {
 
 function playNewRound() {
   hide(choicesDisplay);
-  // show(chooseFighterParagraph)
   show(allBtns);
-  // show(chooseFighterParagraph);
+  game.resetGame();
 }
  
-// function declareWinner() {
-//   chooseFighterParagraph.innerHTML = ``;
-//   if(game.winner === 'you') {
-//     chooseFighterParagraph.innerHTML += `<p class="result">${game.playerOne.choice} wins!</p>`;
-//     debugger
-//   } 
-//   if(game.winner === 'none') {
-//     chooseFighterParagraph.innerHTML += `<p class="result>Its a draw!</p>`
-//     debugger
-//   } 
-//   if(game.winner === 'computer') {
-//     chooseFighterParagraph.innerHTML += `<p class="result>${game.playerTwo.choice} wins!</p>`
-//     debugger
-//   }
-// }
