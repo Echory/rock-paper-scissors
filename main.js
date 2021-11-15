@@ -4,15 +4,15 @@ var hauntedBtn = document.querySelector('#hauntedBtn');
 var chooseGamePage = document.querySelector('#chooseGamePage');
 var allBtns = document.querySelector('#allBtns');
 var hauntedBtns = document.querySelector('#hauntedBtns');
-var rockBtn = document.querySelector('.r');
-var paperBtn = document.querySelector('.p');
-var scissorsBtn = document.querySelector('.s');
-var ghostBtn = document.querySelector('.g');
-var vampireBtn = document.querySelector('.v');
+var rockBtn = document.querySelector('#rock');
+var paperBtn = document.querySelector('#paper');
+var scissorsBtn = document.querySelector('#scissors');
+var ghostBtn = document.querySelector('#ghost');
+var vampireBtn = document.querySelector('#vampire');
 var youSide = document.querySelector('#youSide');
 var computerSide = document.querySelector('#computerSide');
 var choicesDisplay = document.querySelector('#choicesDisplay');
-var chooseFighterParagraph = document.querySelector('#chooseFighterParagraph');
+var changeGameBtn = document.querySelector('#changeBtn');
 
 var game = new Game();
 
@@ -24,8 +24,11 @@ paperBtn.addEventListener('click', getSelectedChoice);
 scissorsBtn.addEventListener('click', getSelectedChoice);
 ghostBtn.addEventListener('click', getSelectedChoice);
 vampireBtn.addEventListener('click', getSelectedChoice);
-// window.addEventListener('DOMContentLoaded', retrieveStorageWins);
-// retrieveStorageWins();
+changeGameBtn.addEventListener('click', backToMain);
+// window.addEventListener('DOMContentLoaded', function(){
+//   retrieveStorageWins();
+// });
+
 
 
 //FUNCTIONS//
@@ -95,7 +98,8 @@ function playNewRound() {
 
 }
  
-// function retrieveStorageWins() {
-//   game.playerOne.retrieveWinsFromStorage('you');
-//   game.playerTwo.retrieveWinsFromStorage('computer');
-// }
+function backToMain() {
+  show(chooseGamePage);
+  hide(allBtns);
+  hide(hauntedBtns);
+}
