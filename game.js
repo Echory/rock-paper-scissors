@@ -18,13 +18,13 @@ class Game {
 
     if(this.winConditions[youChoice].includes(computerChoice)){
       this.playerOne.wins++;
-      this.winner = 'you';
+      this.winner = this.playerOne;
       this.playerOne.saveWinsToStorage();
     } else if(youChoice === computerChoice) {
       this.winner = 'none';
     } else {
       this.playerTwo.wins++;
-      this.winner = 'computer';
+      this.winner = this.playerTwo;
       this.playerTwo.saveWinsToStorage();
     }
     displayFighterChoices();

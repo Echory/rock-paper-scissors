@@ -100,6 +100,11 @@ h1,
   text-transform: uppercase;
 }
 
+.win-icon {
+  width: 20px;
+  height: 20px;
+}
+
 /*----SIDES----*/
 .you-side,
 .computer-side {

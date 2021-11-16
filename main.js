@@ -68,9 +68,10 @@ function displayScore() {
 
 function displayFighterChoices() {
   choicesDisplay.innerHTML = ``;
-  if(game.winner === 'you' || game.winner === 'computer'){
+  if(game.winner === game.playerOne || game.winner === game.playerTwo){
   choicesDisplay.innerHTML += `<div class="fighter-choices">
-  <p class="winner">${game.winner} won this round!</p>
+  <p class="winner"><img class="win-icon" src="${game.winner.token}"> ${game.winner.name} won this round! <img class="win-icon" src="${game.winner.token}">
+  </p>
   <img src="assets/${game.playerOne.choice}.svg">
   <img src="assets/${game.playerTwo.choice}.svg">
   </div>`
