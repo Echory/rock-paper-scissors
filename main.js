@@ -15,6 +15,7 @@ var choicesDisplay = document.querySelector('#choicesDisplay');
 var changeGameBtn = document.querySelector('#changeBtn');
 
 var game = new Game();
+game.fetchScoresFromStorage();
 
 //EVENT LISTENERS//
 classicBtn.addEventListener('click', showClassicGame);
@@ -48,13 +49,8 @@ function showClassicGame() {
 function showHauntedGame() {
   game.type = 'haunted';
   hide(chooseGamePage);
-  show(allBtns);
   show(hauntedBtns);
-}
-
-function startGame() {
-  // set up variables that can hold player wins for local storage
- 
+  show(allBtns);
 }
  
 
@@ -66,8 +62,8 @@ function getSelectedChoice(event) {
 function displayScore() {
   youSide.innerHTML = ``;
   computerSide.innerHTML = ``;
-  youSide.innerHTML += `<p class="you-score">${game.playerOne.retrieveWinsFromStorage()}</p>`;
-  computerSide.innerHTML += `<p class="computer-score">${game.playerTwo.retrieveWinsFromStorage()}</p>`;
+  youSide.innerHTML += `<p class="you-score">${game.playerOne.wins}</p>`;
+  computerSide.innerHTML += `<p class="computer-score">${game.playerTwo.wins}</p>`;
 }
 
 function displayFighterChoices() {
@@ -94,7 +90,6 @@ function playNewRound() {
   hide(choicesDisplay);
   show(allBtns);
   game.resetGame();
-
 }
  
 function backToMain() {

@@ -42,4 +42,9 @@ class Game {
     this.playerOne.choice = null;
     this.playerTwo.choice = null;
   }
+  
+  fetchScoresFromStorage() {
+    this.playerOne.retrieveWinsFromStorage();
+    this.playerTwo.retrieveWinsFromStorage();
+  }
 }
