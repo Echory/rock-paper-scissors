@@ -32,9 +32,9 @@ class Game {
   }
 
   newGame(playerInput) {
-    this.playerOne.takeTurn(this.type, playerInput)
-    this.playerTwo.takeTurn(this.type)
-    this.detectWinner()
+    this.playerOne.takeTurn(this.type, playerInput);
+    this.playerTwo.takeTurn(this.type);
+    this.detectWinner();
   }
 
   resetGame() {
