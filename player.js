@@ -6,23 +6,27 @@ class Player {
     this.choice;
   }
   saveWinsToStorage() {
-
+    localStorage.setItem(this.name, this.wins)
   }
+
   retrieveWinsFromStorage() {
-
+    var storageWins = localStorage.getItem(this.name);
+    if(storageWins === null){
+      this.wins = 0;
+    } else {
+    this.wins = storageWins;
+    }
   }
+
   takeTurn(gameType, playerInput) {
     if(playerInput) {
       this.choice = playerInput
-      // return
     }
     if (this.name === 'Computer' && gameType === 'classic') {
       this.generateComputerChoiceClassic()
-      // return
     }
     if (this.name === 'Computer' && gameType === 'haunted') {
       this.generateComputerChoiceHaunted()
-      // return
     }
   }
 
