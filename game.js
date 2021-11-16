@@ -47,4 +47,4 @@ class Game {
     this.playerOne.retrieveWinsFromStorage();
     this.playerTwo.retrieveWinsFromStorage();
   }
-}
+};

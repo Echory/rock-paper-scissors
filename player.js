@@ -35,9 +35,10 @@ class Player {
     var randomNumber = (Math.floor(Math.random() * 3));
     this.choice = choices[randomNumber];
   }
+  
   generateComputerChoiceHaunted() {
     var choices = ['rock', 'paper', 'scissors', 'ghost', 'vampire'];
     var randomNumber = (Math.floor(Math.random() * 5));
     this.choice = choices[randomNumber];
   }
-}
+};
