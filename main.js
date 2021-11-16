@@ -28,43 +28,39 @@ vampireBtn.addEventListener('click', getSelectedChoice);
 changeGameBtn.addEventListener('click', backToMain);   
 backToMain();
 
-
-
-
 //FUNCTIONS//
 function show(element) {
   element.classList.remove('hidden');
-}
+};
 
 function hide(element) {
   element.classList.add('hidden');
-}
+};
 
 function showClassicGame() {
   game.type = 'classic';
   hide(chooseGamePage);
   show(allBtns);
-}
+};
 
 function showHauntedGame() {
   game.type = 'haunted';
   hide(chooseGamePage);
   show(hauntedBtns);
   show(allBtns);
-}
+};
  
-
 function getSelectedChoice(event) {
   var youChoice = event.target.parentNode.id;
-  game.newGame(youChoice)
-}
+  game.newGame(youChoice);
+};
 
 function displayScore() {
   youSide.innerHTML = ``;
   computerSide.innerHTML = ``;
   youSide.innerHTML += `<p class="you-score">${game.playerOne.wins}</p>`;
   computerSide.innerHTML += `<p class="computer-score">${game.playerTwo.wins}</p>`;
-}
+};
 
 function displayFighterChoices() {
   choicesDisplay.innerHTML = ``;
@@ -85,17 +81,17 @@ function displayFighterChoices() {
   show(choicesDisplay);
   hide(allBtns);
   setTimeout(playNewRound, 1000);
-}
+};
 
 function playNewRound() {
   hide(choicesDisplay);
   show(allBtns);
   game.resetGame();
-}
+};
  
 function backToMain() {
   show(chooseGamePage);
   hide(allBtns);
   hide(hauntedBtns);
   displayScore();
-}
+};

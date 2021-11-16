@@ -25,6 +25,7 @@ button:hover {
   color: white;
   font-size: 20px;
   border: 6px dotted black;
+  cursor: pointer;
 }
 
 .classic-button,
@@ -33,7 +34,6 @@ button:hover {
   height: 200px;
   border: 4px dotted black;
   background-color: black;
-  cursor: pointer;
   font-size: 17px;
   opacity: 0.70;
 }
@@ -91,7 +91,6 @@ h1,
   background-color: white;
   opacity: 0.70;
   border-radius: 50px;
-  cursor: pointer;
 }
 
 .winner {
@@ -140,5 +139,4 @@ h1,
 .change-btn {
   font-size: 17px;
   margin-top: 90px;
-  cursor: pointer;
 }
